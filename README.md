@@ -1,4 +1,4 @@
-# observability-stack
+# beacon
 
 Starter patterns for logs, metrics, traces, and operational visibility.
 
@@ -8,9 +8,9 @@ Give the ecosystem a clear observability baseline so platform repos do not treat
 
 ## Role in the ecosystem
 
-- Visibility layer for `master-platform`, `ai-platform`, and `saas-platform`
-- Built on top of `infrastructure-platform`
-- Neighbor to `security-platform`
+- Visibility layer for `orbit`, `synapse`, and `saas-platform`
+- Built on top of `nimbus`
+- Neighbor to `aegis`
 
 ## Status
 
@@ -25,7 +25,7 @@ Documentation-first starter with example telemetry config and operational notes.
 ## Structure
 
 ```text
-observability-stack/
+beacon/
 ├── configs/
 │   └── otel-collector.yaml
 ├── docs/
@@ -42,9 +42,9 @@ Use the collector config as a reference baseline for local or non-prod telemetry
 
 ## Related repositories
 
-- `infrastructure-platform`
-- `security-platform`
-- `master-platform`
+- `nimbus`
+- `aegis`
+- `orbit`
 
 ## Future direction
 
