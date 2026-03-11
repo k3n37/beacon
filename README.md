@@ -8,7 +8,7 @@ Give the ecosystem a clear observability baseline so platform repos do not treat
 
 ## Role in the ecosystem
 
-- Visibility layer for `orbit`, `synapse`, and `saas-platform`
+- Visibility layer for `orbit`, `synapse`, and `summit`
 - Built on top of `nimbus`
 - Neighbor to `aegis`
 
