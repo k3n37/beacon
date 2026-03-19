@@ -1,51 +1,34 @@
 # beacon
 
-Starter patterns for logs, metrics, traces, and operational visibility.
-
 ## Purpose
+Make system behavior visible through logs, metrics, traces, and operational telemetry.
 
-Give the ecosystem a clear observability baseline so platform repos do not treat telemetry as an afterthought.
+## Why it matters
+When observability is weak, failures take longer to diagnose and runtime behavior turns into guesswork.
 
-## Role in the ecosystem
+## Scope
+This repo focuses on telemetry structure, collector configuration, and visibility patterns. It does not try to replace a full monitoring stack.
 
-- Visibility layer for `orbit`, `synapse`, and `summit`
-- Built on top of `nimbus`
-- Neighbor to `aegis`
+## System Role
+`beacon` is the observability layer for the ecosystem. It exposes how runtime services behave so reliability and delivery work can respond to real signals.
 
-## Status
+## System Connections
+- Depends on: runtime services and infrastructure context from `nimbus`.
+- Feeds into: `signal` and operational review loops.
+- Interacts with: runtime services, `signal`, `aegis`.
 
-Documentation-first starter with example telemetry config and operational notes.
+## Core Concepts
+- structured logging
+- metrics collection
+- trace propagation
+- service visibility
+- operational context
 
-## Tech stack
+## Minimal Artifact
+`configs/otel-collector.yaml` and `docs/dashboards.md` provide the starter observability baseline.
 
-- OpenTelemetry config samples
-- YAML
-- Markdown
+## Notes
+The useful output is visibility that supports diagnosis and operations, not telemetry volume for its own sake.
 
-## Structure
-
-```text
-beacon/
-├── configs/
-│   └── otel-collector.yaml
-├── docs/
-│   └── dashboards.md
-├── .editorconfig
-├── .gitignore
-├── README.md
-└── ROADMAP.md
-```
-
-## Getting started
-
-Use the collector config as a reference baseline for local or non-prod telemetry setups.
-
-## Related repositories
-
-- `nimbus`
-- `aegis`
-- `orbit`
-
-## Future direction
-
-Add dashboards and SLO references, but keep the repo focused on platform observability patterns.
+## Next Steps
+Add service instrumentation examples, alert routing notes, and runtime correlation patterns.
